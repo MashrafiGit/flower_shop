@@ -1,6 +1,6 @@
 # FlowerShop Landing Page 🌸
 
-🔗 **Live Demo:** https://your-live-link.vercel.app
+🔗 **Live Demo:** https://flower-shop-six-tau.vercel.app/
 
 This is a **practice frontend project** built using **HTML and CSS**.  
 The project represents a flower shop landing page with multiple sections such as hero, featured products, services, hot deals, Instagram gallery, newsletter subscription, and footer.
