@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --- VARIABLES --- */
+:root {
+    --primary-color: #E55473;
+    --primary-light: #FBEFF1;
+    --text-dark: #272727;
+    --text-gray: #808080;
+    --white: #FFFFFF;
+
+    --font-heading: "Roboto", sans-serif;
+    --font-body: "Roboto", sans-serif;
+
+    --transition: all 0.3s ease;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* --- UTILITIES --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: .8rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    font-size: 0.95rem;
+}
+
+/* --- HEADER / HERO SECTION --- */
+header {
+    background-color: var(--primary-light);
+    padding: 50px 0 0 0;
+    overflow: hidden;
+    /* For float clearing if needed, though using flex */
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* Image on right, Text on left usually */
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+.hero-text {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    /* 🔐 desktop lock */
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* --- FEATURED SECTION --- */
+.featured {
+    padding: 60px 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    text-align: center;
+    transition: var(--transition);
+}
+
+.product-img-box {
+    background-color: #f4f4f4;
+    padding: 20 0px;
+    max-width: 280px;
+    height: 320px;
+    border-radius: 100% 100% 0 0;
+
+    /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    max-height: 85%;
+    margin-top: auto;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 20px;
+    max-width: 280px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    /* Style choice based on typical links */
+    text-decoration-color: transparent;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-title {
+    text-decoration: underline;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* --- FEATURES / BENEFITS BAR --- */
+.benefits {
+    background-color: rgba(39, 39, 39, 0.03);
+    padding: 40px 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.benefits-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefit-item {
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    /* Placeholder styling for icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    /* Slightly bolder */
+}
+
+.benefit-sub {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-top: 5px;
+}
+
+/* --- HOT DEAL SECTION --- */
+.hot-deal {
+    background-color: #E554731A;
+    /* Very light pink/red opacity */
+    padding: 0;
+    text-align: center;
+    /* Centered layout implied by extraction */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    /* Specific light bg */
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.deal-content {
+    flex: 1;
+    text-align: center;
+}
+
+.deal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.deal-content h2 span {
+    color: var(--primary-color);
+}
+
+.deal-image {
+    flex: 1;
+    text-align: center;
+
+    img {
+        max-width: 50%;
+        max-height: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* --- INSTAGRAM SECTION --- */
+.instagram {
+    padding: 80px 0;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.insta-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 250px;
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.insta-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111010;
+    color: var(--white);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.footer-brand {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.footer-brand span {
+    color: var(--primary-color);
+}
+
+.footer-desc {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #d3d3d3;
+    font-size: 0.9rem;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    flex: 1;
+    font-family: var(--font-body);
+}
+
+.subscribe-form button {
+    padding: 9px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet & Small Desktop */
+/* =====================
+   TABLET (≤ 992px)
+===================== */
+@media (max-width: 992px) {
+
+    /* ---- EXISTING (KEEP) ---- */
+    .hero-wrapper {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .hero-image img {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(280px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        /* 🔥 key */
+    }
+
+
+    .product-card {
+        width: 280px;
+        /* 🔐 lock width */
+        margin: 0 auto;
+        /* center */
+        text-align: center;
+    }
+
+
+    .product-img-box img {
+        max-height: 220px;
+    }
+
+
+    .benefits {
+        margin: 30px 20px;
+    }
+
+    .deal-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .deal-image img {
+        max-width: 260px;
+    }
+
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---- ADD THIS ---- */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .benefit-text {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .insta-item img {
+        width: auto;
+        margin: auto;
+    }
+.subscribe-form {
+    max-width: 80%;
+}
+}
+
+
+/* Mobile */
+/* =====================
+   MOBILE (≤ 568px)
+===================== */
+@media (max-width: 768px) {
+
+    /* ---- EXISTING (KEEP) ---- */
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        max-width: 260px;
+        max-height: 230px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-img-box {
+        height: 280px;
+    }
+
+    .product-img-box img {
+        max-height: 200px;
+    }
+
+    .benefits-wrapper {
+        flex-direction: column;
+    }
+
+    .deal-wrapper {
+        padding: 20px;
+    }
+
+    .deal-image img {
+        max-width: 180px;
+    }
+
+    .insta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        font-size: .8rem;
+        font-weight: 500;
+    }
+
+    .subscribe-form input::placeholder {
+        font-size: 0.7rem;
+        color: #999;
+    }
+
+    .product-title {
+        font-size: 0.9rem;
+    }
+
+    .footer-brand {
+        font-size: 1.7rem
+    }
+
+    .mail-head {
+        font-size: 1.2rem
+    }
+
+    .mail-des {
+        font-size: .8rem;
+    }
+
+    .footer-desc {
+        font-size: .8rem;
+    }
+
+    /* ---- ADD THIS ---- */
+    .hero-text {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .section-desc {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+
+    .benefit-text {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
+    }
+
+    .deal-content h2 {
+        font-size: 1.4rem;
+    }
+}
