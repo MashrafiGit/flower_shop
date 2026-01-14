@@ -38,13 +38,13 @@ The main focus of this project was to practice **layout design, responsiveness, 
 ---
 
 ## 📁 Project Structure
-flower-shop/
-├── index.html
-├── index.css
-├── FlowerAsset/
-│ ├── images
-│ └── icons
-└── README.md
+flower-shop/<br/>
+├── index.html<br/>
+├── index.css<br/>
+├── FlowerAsset/<br/>
+│ ├── images<br/>
+│ └── icons<br/>
+└── README.md<br/>
 
 ---
 
